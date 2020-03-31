@@ -1,2 +1,5 @@
 # Ignore all the pdf files
 *.pdf
+
+# Ignore the checkpoint backups
+.ipynb_checkpoints

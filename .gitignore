@@ -4,3 +4,4 @@
 # Ignore the checkpoint backups
 .ipynb_checkpoints
 cache
+__pycache__

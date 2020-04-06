@@ -16,6 +16,8 @@ class Flight:
 			raise ValueError(f"Invalid route number '{number[2:]}'")
 		self._number = number
 		self._aircraft = aircraft
+		rows, seats = self._aircraft.seating_plan()
+		self._seating = [None,]
 	
 	def number(self):
 		return self._number

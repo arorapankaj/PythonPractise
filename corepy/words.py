@@ -8,9 +8,15 @@ def fetch_words():
         for words in line_words:
             story_words.append(words)
     story.close()
+    return story_words
 
+def print_words(story_words):
     for words in story_words:
         print(words)
+
+def main():
+    words = fetch_words()
+    print_words(words)
         
 if __name__ == "__main__":
-    fetch_words()
+    main()

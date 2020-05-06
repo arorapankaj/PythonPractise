@@ -1,4 +1,5 @@
 import sys
+from math import log
 
 
 DIGIT_MAP = {
@@ -17,16 +18,20 @@ DIGIT_MAP = {
             
 def convert(s):
     """Convert a string to an integer."""
-    x = -1
     try:
         number = ''
         for token in s:
             number += DIGIT_MAP[token]
-        x = int(number)
+        return int(number)
         #print(f'Convertion succeeded!!! x = {x}')
     except (KeyError, TypeError) as e:
         #print(f'Conversion failed!!!')
         #print('Error=",e)
         print(f'Conversion Error: {e!r}', file=sys.stderr)
         #pass
-    return x
+        raise
+    #return x
+    
+def string_log(s):
+    v = convert(s)
+    return log(v)
